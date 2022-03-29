@@ -8,10 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="hands-container"></div>
-    <div id="name-container"></div>
-    <div id="gameLives-container"></div>
-    <div id="score-container"></div>
+    <div id="hands-container">
+        <div class="handBox">Rock</div>
+        <div class="handBox">Lizard</div>
+        <div class="handBox">Spock</div>
+        <div class="handBox">Paper</div>
+        <div class="handBox">Scissors</div>
+    </div>
+    <div id="name-container">
+        <div id="userName" class="nameBox">username</div>
+        <div id="statusBox">VS</div>
+        <div id="comName" class="nameBox">computer</div>
+    </div>
+    <div id="gameLives-container">
+        <div class="livesBox"></div>
+        <div class="pickedBox"><p class="selected">choosen hand</p></div>
+        <div id="centerFold"></div>
+        <div class="pickedBox"><p class="selected">computer hand</p></div>
+        <div class="livesBox"></div>
+    </div>
+    <div id="score-container">
+        <div id="winBox" class="scoreBox">WINS</div>
+        <div id="winCount" class="countBox">1</div>
+        <div id="lostCount"class="countBox">0</div>
+        <div id="lostBox" class="scoreBox">LOST</div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

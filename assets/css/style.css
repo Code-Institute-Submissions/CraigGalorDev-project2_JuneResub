@@ -1,8 +1,97 @@
 /*----main body content----*/
-#hands-container{}
-#name-container{}
-#gameLives-container{}
-#score-container{}
+body{
+    margin: 0 0 0 12%;
+}
+#hands-container{
+    height: 200px;
+    width: 1000px;
+    background-color: aqua;
+}
+#name-container{
+    height: 50px;
+    width: 1000px;
+    background-color: rgb(0, 81, 255);
+}
+#gameLives-container{
+    height: 320px;
+    width: 1000px;
+    background-color: rgb(234, 0, 255);
+}
+#score-container{
+    height: 100px;
+    width: 1000px;
+    background-color: rgb(255, 0, 106);}
+/*----hands----*/
+.handBox{
+    margin-top: 10px;
+    margin-left: 45px;
+    display: inline-block;
+    height: 140px;
+    width: 140px;
+    background-color: rgb(24, 194, 100);
+}
+/*----name and status boxs----*/
+.nameBox{
+    float: left;
+    margin:4px 0 0 60px;
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    background-color: rgb(24, 194, 100);
+}
+#statusBox{
+    float: left;
+    margin:4px 0 0 20px;
+    display: inline-block;
+    height: 40px;
+    width: 140px;
+    background-color: rgb(24, 194, 100);
+}
+/*----game lives and selected hand----*/
+.livesBox{
+    float: left;
+    margin:10px 0 0 45px;
+    display: inline-block;
+    height: 250px;
+    width: 50px;
+    background-color: rgb(24, 194, 100);
+}
+.pickedBox{
+    float: left;
+    margin:10px 0 0 45px;
+    padding: 0;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(24, 194, 100);
+}
+.selected{
+    background-color: brown;
+}
+#centerFold{
+    float: left;
+    margin:10px 0 0 45px;
+    display: inline-block;
+    height: 250px;
+    width: 50px;
+    background-color: rgb(24, 194, 100);
+}
+/*----score titles and count boxs----*/
+.scoreBox{
+    margin-top: 4px;
+    margin-left: 45px;
+    display: inline-block;
+    height: 50px;
+    width: 250px;
+    background-color: rgb(24, 194, 100); 
+}
+.countBox{
+    margin-top: 4px;
+    margin-left: 45px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(24, 194, 100); 
+}
 /*----media queries----*/
 @media(max-width:500px){}
 @media(max-width:350px){}
