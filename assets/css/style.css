@@ -23,43 +23,62 @@ body{
     background-color: rgb(255, 0, 106);}
 /*----hands----*/
 .handBox{
-    margin-top: 10px;
-    margin-left: 45px;
+    margin:10px 0 0 45px;
     display: inline-block;
     height: 140px;
     width: 140px;
     background-color: rgb(24, 194, 100);
-}
-.handBox:hover{
-
-    margin:10px 0 0 5px;
-    height: 180px;
-    width: 180px;
 }
 #rock{
     background-image: url("../images/rock.png");
     background-size: 90%;
     background-repeat: no-repeat;
 }
+#rock:hover{
+    margin:10px 0 0 5px;
+    height: 180px;
+    width: 180px;
+}
 #lizard{
     background-image: url("../images/lizard.png");
     background-size: 90%;
     background-repeat: no-repeat;
+}
+#lizard:hover{
+    margin:10px -4px 0 10px;
+    height: 180px;
+    width: 180px;
 }
 #spock{
     background-image: url("../images/spock.png");
     background-size: 90%;
     background-repeat: no-repeat;
 }
+#spock:hover{
+    background-position-x:5px ;
+    margin:10px 0 0 5px;
+    height: 180px;
+    width: 180px;
+}
 #paper{
     background-image: url("../images/paper.png");
     background-size: 60%;
     background-repeat: no-repeat;
 }
+#paper:hover{
+    margin:10px 0 0 5px;
+    height: 180px;
+    width: 180px;
+}
 #scissors{
     background-image: url("../images/scissors.png");
     background-size: 100%;
     background-repeat: no-repeat;
+}
+#scissors:hover{
+    margin:10px 0 0 5px;
+    height: 180px;
+    width: 180px;
 }
 #playerSelection{
     background-image: url("../images/spock.png");
@@ -79,11 +98,15 @@ body{
     background-color: rgb(24, 194, 100);
 }
 #userName{
+    text-transform: uppercase;
+    color: rgb(14, 7, 112);
     text-align: center;
     float: left;
     margin:4px 0 0 185px;
 }
 #statusBox{
+    text-transform: capitalize;
+    color: rgb(14, 7, 112);
     text-align: center;
     float: left;
     margin:4px 0 0 20px;
@@ -93,6 +116,8 @@ body{
     background-color: rgb(24, 194, 100);
 }
 #comName{
+    text-transform: uppercase;
+    color: rgb(14, 7, 112);
     text-align: center;
     float: left;
     margin:4px 0 0 20px;
@@ -124,8 +149,9 @@ body{
     background-color: brown;
 }
 #centerFold{
-border-left: solid 3px red ;
-border-right: solid 3px red ;
+border-left: solid 3px rgb(14, 7, 112);
+border-right: solid 3px rgb(14, 7, 112);
+border-style: groove;
     float: left;
     margin:10px 0 0 45px;
     display: inline-block;
@@ -135,10 +161,16 @@ border-right: solid 3px red ;
 }
 /*----life boxs----*/
 .life{
-    margin-top: 10px;
+    margin: 10px 0 0 4px;
     height: 45px;
     width: 45px;
-    background-color: red;
+    border-radius: 50%;
+    border:solid 5px rgb(14, 7, 112);
+}
+.fa-solid{
+    text-align: center;
+    color: red;
+    font-size: 30px;
 }
 /*----score titles and count boxs----*/
 .scoreBox{
@@ -149,24 +181,43 @@ border-right: solid 3px red ;
     background-color: rgb(24, 194, 100); 
 }
 #winBox{
-    margin: 4px 0 0 170px;
+    margin: 0 0 0 170px;
 }
 #lostBox{
-    margin: 4px 0 0 10px; 
+    margin: 0 0 0 10px; 
 }
 .countBox{
     text-align: center;
+    text-size-adjust: 20px;
     display: inline-block;
     height: 50px;
     width: 50px;
     background-color: rgb(24, 194, 100); 
 }
 #winCount{
-    margin: 4px 0 0 10px;
+    margin: 0px 0 0 10px;
+    color:green;
 }
 #lostCount{
-    margin: 4px 0 0 20px;
+    margin: 0px 0 0 20px;
+    color: red;
 }
 /*----media queries----*/
-@media(max-width:500px){}
+@media(max-width:500px){
+    .livesBox{
+        height: 50px;
+        width: 250px;
+        background-color: rgb(24, 194, 100);
+    }
+    #playerLives{
+        display: inline-block;
+        float:right;
+        margin:10px 0 0 80px;
+    }
+    #comLives{
+        display: inline-block;
+        float: right;
+        margin:10px 0 0 45px;
+    }
+}
 @media(max-width:350px){}
