@@ -1,0 +1,8 @@
+/*----main body content----*/
+#hands-container{}
+#name-container{}
+#gameLives-container{}
+#score-container{}
+/*----media queries----*/
+@media(max-width:500px){}
+@media(max-width:350px){}
