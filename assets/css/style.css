@@ -1,41 +1,52 @@
 /*----main body content----*/
 body{
-    margin: 0 0 0 12%;
+    margin: 0 5% 0 10%;
 }
 #hands-container{
+    overflow: hidden;
     height: 200px;
-    width: 1000px;
+    width: 90%;
     background-color: aqua;
 }
 #name-container{
+    overflow: hidden;
     height: 50px;
-    width: 1000px;
+    width: 90%;
     background-color: rgb(0, 81, 255);
 }
 #gameLives-container{
-    height: 320px;
-    width: 1000px;
+    overflow: hidden;
+    height: 265px;
+    width: 90%;
     background-color: rgb(234, 0, 255);
 }
+#startGame{
+    overflow: hidden;
+    height: 60px;
+    width: 90%;
+    background-color: rgb(4, 189, 245);
+}
 #score-container{
+    overflow: hidden;
     height: 70px;
-    width: 1000px;
+    width: 90%;
     background-color: rgb(255, 0, 106);}
-/*----hands----*/
+/*----hand selection content----*/
 .handBox{
-    margin:10px 0 0 45px;
-    display: inline-block;
+    margin:0.8% 0 0 5%;
+    float:left;
     height: 140px;
     width: 140px;
     background-color: rgb(24, 194, 100);
 }
 #rock{
+    margin:0.8% 0 0 6%;
     background-image: url("../images/rock.png");
     background-size: 90%;
     background-repeat: no-repeat;
 }
 #rock:hover{
-    margin:10px 0 0 5px;
+    margin:0.8% 1.8% 0 0.4%;
     height: 180px;
     width: 180px;
 }
@@ -61,6 +72,8 @@ body{
     width: 180px;
 }
 #paper{
+    margin:0.8% 6% 0 0;
+    float:right;
     background-image: url("../images/paper.png");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -71,6 +84,8 @@ body{
     width: 180px;
 }
 #scissors{
+    margin:0.8% 6% 0 0;
+    float:right;
     background-image: url("../images/scissors.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -129,14 +144,54 @@ body{
     width: 50px;
     background-color: rgb(24, 194, 100);
 }
+.livesBox2{
+    display: inline-block;
+    height: 50px;
+    width: 250px;
+    background-color: rgb(24, 194, 100);
+}
 #playerLives{
     float: left;
     margin:10px 0 0 80px;
+}
+#playerLives2{
+    float: left;
+    margin:0 0 0 17%;
 }
 #comLives{
     float: left;
     margin:10px 0 0 45px;
 }
+#comLives2{
+    float: right;
+    margin:0 17% 0 0;
+}
+/*----life boxs----*/
+.life{
+    margin: 10px 0 0 4px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border:solid 5px rgb(14, 7, 112);
+}
+.life2{
+    display:inline-block;
+    margin: 4px 0 0 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border:solid 5px rgb(14, 7, 112);
+}
+.fa-solid{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+/*-------Start Button-------*/
+#startButton{
+    margin: 0.1% 0 0 5%;
+}
+/*------users choosen hand display----*/ 
 .pickedBox{
     float: left;
     margin:10px 0 0 45px;
@@ -158,19 +213,6 @@ border-style: groove;
     height: 250px;
     width: 44px;
     background-color: rgb(24, 194, 100);
-}
-/*----life boxs----*/
-.life{
-    margin: 10px 0 0 4px;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    border:solid 5px rgb(14, 7, 112);
-}
-.fa-solid{
-    text-align: center;
-    color: red;
-    font-size: 30px;
 }
 /*----score titles and count boxs----*/
 .scoreBox{
@@ -203,21 +245,80 @@ border-style: groove;
     color: red;
 }
 /*----media queries----*/
-@media(max-width:500px){
-    .livesBox{
-        height: 50px;
-        width: 250px;
-        background-color: rgb(24, 194, 100);
-    }
-    #playerLives{
-        display: inline-block;
-        float:right;
-        margin:10px 0 0 80px;
-    }
-    #comLives{
-        display: inline-block;
-        float: right;
-        margin:10px 0 0 45px;
-    }
+/*----------------------*/
+@media(max-width:900px){
+    #centerFold{
+        border-left: solid 3px rgb(14, 7, 112);
+        border-right: solid 3px rgb(14, 7, 112);
+        border-style: groove;
+            float: left;
+            margin:10px 0 0 45px;
+            display: inline-block;
+            height: 250px;
+            width: 20px;
+            background-color: rgb(24, 194, 100);
+        }
+        body{
+            margin: 0 0 0 0;
+        }  
+        .handBox{
+            margin:10px 0 0 30px;
+            display: inline-block;
+            height: 140px;
+            width: 140px;
+            background-color: rgb(24, 194, 100);
+        }
+        #rock{
+            margin:10px 0 0 50px;
+            background-image: url("../images/rock.png");
+            background-size: 90%;
+            background-repeat: no-repeat;
+        }
+        #rock:hover{
+            margin:10px 0 0 5px;
+            height: 180px;
+            width: 180px;
+        }
+        #lizard{
+            background-image: url("../images/lizard.png");
+            background-size: 90%;
+            background-repeat: no-repeat;
+        }
+        #lizard:hover{
+            margin:10px -4px 0 10px;
+            height: 180px;
+            width: 180px;
+        }
+        #spock{
+            background-image: url("../images/spock.png");
+            background-size: 90%;
+            background-repeat: no-repeat;
+        }
+        #spock:hover{
+            background-position-x:5px ;
+            margin:10px 0 0 5px;
+            height: 180px;
+            width: 180px;
+        }
+        #paper{
+            background-image: url("../images/paper.png");
+            background-size: 60%;
+            background-repeat: no-repeat;
+        }
+        #paper:hover{
+            margin:10px 0 0 5px;
+            height: 180px;
+            width: 180px;
+        }
+        #scissors{
+            background-image: url("../images/scissors.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        #scissors:hover{
+            margin:10px 0 0 5px;
+            height: 180px;
+            width: 180px;
+        }     
 }
-@media(max-width:350px){}
+@media(max-width:500px){}
