@@ -18,7 +18,7 @@ body{
     background-color: rgb(234, 0, 255);
 }
 #score-container{
-    height: 100px;
+    height: 70px;
     width: 1000px;
     background-color: rgb(255, 0, 106);}
 /*----hands----*/
@@ -32,12 +32,14 @@ body{
 }
 /*----name and status boxs----*/
 .nameBox{
-    float: left;
-    margin:4px 0 0 60px;
     display: inline-block;
     height: 40px;
-    width: 200px;
+    width: 220px;
     background-color: rgb(24, 194, 100);
+}
+#userName{
+    float: left;
+    margin:4px 0 0 185px;
 }
 #statusBox{
     float: left;
@@ -47,14 +49,24 @@ body{
     width: 140px;
     background-color: rgb(24, 194, 100);
 }
+#comName{
+    float: left;
+    margin:4px 0 0 20px;
+}
 /*----game lives and selected hand----*/
 .livesBox{
-    float: left;
-    margin:10px 0 0 45px;
     display: inline-block;
     height: 250px;
     width: 50px;
     background-color: rgb(24, 194, 100);
+}
+#playerLives{
+    float: left;
+    margin:10px 0 0 80px;
+}
+#comLives{
+    float: left;
+    margin:10px 0 0 45px;
 }
 .pickedBox{
     float: left;
@@ -68,29 +80,39 @@ body{
     background-color: brown;
 }
 #centerFold{
+border-left: solid 3px red ;
+border-right: solid 3px red ;
     float: left;
     margin:10px 0 0 45px;
     display: inline-block;
     height: 250px;
-    width: 50px;
+    width: 44px;
     background-color: rgb(24, 194, 100);
 }
 /*----score titles and count boxs----*/
 .scoreBox{
-    margin-top: 4px;
-    margin-left: 45px;
     display: inline-block;
     height: 50px;
     width: 250px;
     background-color: rgb(24, 194, 100); 
 }
+#winBox{
+    margin: 4px 0 0 170px;
+}
+#lostBox{
+    margin: 4px 0 0 10px; 
+}
 .countBox{
-    margin-top: 4px;
-    margin-left: 45px;
     display: inline-block;
     height: 50px;
     width: 50px;
     background-color: rgb(24, 194, 100); 
+}
+#winCount{
+    margin: 4px 0 0 10px;
+}
+#lostCount{
+    margin: 4px 0 0 20px;
 }
 /*----media queries----*/
 @media(max-width:500px){}
