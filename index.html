@@ -9,11 +9,21 @@
 </head>
 <body>
     <div id="hands-container">
-        <div id="rock" class="handBox"><div class="Label">Rock</div></div>
-        <div id="lizard" class="handBox"><div class="Label">Lizard</div></div>
-        <div id="spock" class="handBox"><div id="spockLabel"class="Label">Spock</div></div>
-        <div id="paper" class="handBox"><div class="Label">Paper</div></div>
-        <div id="scissors" class="handBox"><div class="Label">Scissors</div></div>
+        <button data-type="rock" id="rock" class="handBox">
+            <div class="Label">Rock</div>
+        </button>
+        <button data-type="lizard" id="lizard" class="handBox">
+            <div class="Label">Lizard</div>
+        </button>
+        <button data-type="spock" id="spock" class="handBox">
+            <div id="spockLabel"class="Label">Spock</div>
+        </button>
+        <button data-type="paper" id="paper" class="handBox">
+            <div class="Label">Paper</div>
+        </button>
+        <button data-type="scissors" id="scissors" class="handBox">
+            <div class="Label">Scissors</div>
+        </button>
     </div>
     <div id="name-container">
         <div id="userName" class="nameBox"><h3>username</h3></div>
@@ -29,7 +39,7 @@
         <div id="playerSelection" class="pickedBox"><div id="playerSelect" class="selected"></div></div>
         <div id="centerFold"></div>
         <div id="comSelection" class="pickedBox"><div id="computerSelect" class="selected"></div></div>
-        <input id="startButton" type="button" value="Start">
+        <button data-type="submit" id="startButton" >Start</button> 
         <div id="comLives" class="livesBox">
             <div  class="life"><i  class="fa-solid fa-heart-circle-plus comLifeOne"></i></div>
             <div  class="life"><i  class="fa-solid fa-heart-circle-plus comLifeTwo"></i></div>
