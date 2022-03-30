@@ -275,79 +275,190 @@ background-color: rgb(24, 194, 100);
 }
 /*----media queries----*/
 /*----------------------*/
-@media(max-width:900px){
-    #centerFold{
-        border-left: solid 3px rgb(14, 7, 112);
-        border-right: solid 3px rgb(14, 7, 112);
-        border-style: groove;
-            float: left;
-            margin:10px 0 0 45px;
-            display: inline-block;
-            height: 250px;
-            width: 20px;
-            background-color: rgb(24, 194, 100);
-        }
+@media(max-width:1200px){
+   
         body{
-            margin: 0 0 0 0;
+            margin: 0 0 0 9%;
         }  
-        .handBox{
-            margin:10px 0 0 30px;
-            display: inline-block;
-            height: 140px;
-            width: 140px;
-            background-color: rgb(24, 194, 100);
-        }
+        #centerFold{
+            position: relative;
+            left:48.2%;
+            width: 2%;
+            }
         #rock{
-            margin:10px 0 0 50px;
-            background-image: url("../images/rock.png");
-            background-size: 90%;
-            background-repeat: no-repeat;
+            position:fixed;
+            top: 4%;
+            left:14%;
         }
         #rock:hover{
-            margin:10px 0 0 5px;
-            height: 180px;
-            width: 180px;
+            position:fixed;
+            top: 2%;
+            left:11%;
         }
         #lizard{
-            background-image: url("../images/lizard.png");
-            background-size: 90%;
-            background-repeat: no-repeat;
+            position:fixed;
+            top: 4%;
+            left:28.2%;
         }
         #lizard:hover{
-            margin:10px -4px 0 10px;
-            height: 180px;
-            width: 180px;
+            position:fixed;
+            top: 2%;
+            left:27.8%;
         }
         #spock{
-            background-image: url("../images/spock.png");
-            background-size: 90%;
-            background-repeat: no-repeat;
+            position:fixed;
+            top: 4%;
+            left:43.9%;
         }
         #spock:hover{
-            background-position-x:5px ;
-            margin:10px 0 0 5px;
-            height: 180px;
-            width: 180px;
+            position:fixed;
+            top: 2%;
+            left:42.2%;
         }
         #paper{
-            background-image: url("../images/paper.png");
-            background-size: 60%;
-            background-repeat: no-repeat;
+            position:fixed;
+            top: 4%;
+            right:28.5%;
         }
         #paper:hover{
-            margin:10px 0 0 5px;
-            height: 180px;
-            width: 180px;
+            position:fixed;
+            top: 2%;
+            right:27.4%;
         }
         #scissors{
-            background-image: url("../images/scissors.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
+            position:fixed;
+            top: 4%;
+            right:14%;
         }
         #scissors:hover{
-            margin:10px 0 0 5px;
-            height: 180px;
-            width: 180px;
-        }     
+            position:fixed;
+            top: 2%;
+            right:12%;
+        }
+        #comSelection{
+            display:inline-block;
+            position:absolute;
+            right: 25%;
+        }
+        #comLives{
+            position:absolute;
+            right: 19.8%;
+        }
+        #startButton{
+            position:relative;
+            top:10%;
+            left: 41.6%;
+            width: 10%;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        .scoreBox{
+            text-align: center;
+            display: inline-block;
+            height: 50px;
+            width: 250px;
+            background-color: rgb(24, 194, 100); 
+        }
+        #winBox{
+            position: relative;
+            left:18.5%;
+        }
+        #lostBox{
+            position: relative;
+            left:17.5%; 
+        }
+        .countBox{
+            text-align: center;
+            text-size-adjust: 20px;
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color: rgb(24, 194, 100); 
+        }
+        #winCount{
+            position: relative;
+            left:18%;
+        }
+        #lostCount{
+            position: relative;
+            left:18%;
+        }
+        
 }
-@media(max-width:500px){}
+@media(max-width:900px){
+    #rock{
+        position:fixed;
+        top: 4%;
+        left:14%;
+        background-image: url("../images/rock.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+    }
+    #rock:hover{
+        position:fixed;
+        top: 2%;
+        left:13%;
+        height: 180px;
+        width: 180px;
+    }
+    #lizard{
+        position:fixed;
+        top: 4%;
+        left:28.2%;
+        background-image: url("../images/lizard.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+    }
+    #lizard:hover{
+        position:fixed;
+        top: 2%;
+        left:26.8%;
+        height: 180px;
+        width: 180px;
+    }
+    #spock{
+        position:fixed;
+        top: 4%;
+        left:42.5%;
+        background-image: url("../images/spock.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+    }
+    #spock:hover{
+        position:fixed;
+        top: 2%;
+        left:41.2%;
+        height: 180px;
+        width: 180px;
+    }
+    #paper{
+        position:fixed;
+        top: 4%;
+        right:32.5%;
+        background-image: url("../images/paper.png");
+        background-size: 60%;
+        background-repeat: no-repeat;
+    }
+    #paper:hover{
+        position:fixed;
+        top: 2%;
+        right:31.2%;
+        height: 180px;
+        width: 180px;
+    }
+    #scissors{
+        position:fixed;
+        top: 4%;
+        right:18%;
+        background-image: url("../images/scissors.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #scissors:hover{
+        position:fixed;
+        top: 2%;
+        right:17.2%;
+        height: 180px;
+        width: 180px;
+    }
+}
