@@ -224,7 +224,7 @@ body{
     border-radius: 50%;
     border: solid 2px blue;
 }
-#playerSelect{
+#playersChoosen{
     background-image: url("../images/spock.png");
     background-position-x:90% ;
     background-position-y:40% ;
@@ -233,7 +233,7 @@ body{
     background-repeat: no-repeat;
     background-color: gray;
 }
-#computerSelect{
+#computersChoosen{
     background-image: url("../images/rock.png");
     background-position-x:90% ;
     background-position-y:40% ;
