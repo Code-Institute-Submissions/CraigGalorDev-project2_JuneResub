@@ -239,25 +239,26 @@ body{
     height:100%;
     width: 100%;
     border-radius: 50%;
-    border: solid 2px blue;
 }
 #playersChoosen{
-    background-image: url("../images/spock.png");
+    background-image: url("");
     background-position-x:90% ;
     background-position-y:40% ;
     transform:rotateZ(10deg);
     background-size: 85%;
     background-repeat: no-repeat;
     background-color: gray;
+    border: solid 2px blue;
 }
 #computersChoosen{
-    background-image: url("../images/rock.png");
+    background-image: url("");
     background-position-x:90% ;
     background-position-y:40% ;
     transform:rotateZ(10deg);
     background-size: 85%;
     background-repeat: no-repeat;
     background-color: gray;
+    border: solid 2px blue;
 }
 /*----borderline seperating selected hands-----*/
 #centerFold{

@@ -131,6 +131,8 @@ function startGame(){
             alert(`${playerSelect} > ${computerSelect}`);
             alert("You win");
             ++winCount;
+            document.getElementById('playersChoosen').style.border = 'solid 5px green';
+            document.getElementById('computersChoosen').style.border = 'solid 5px red';  
             document.getElementById("winCount").innerText=winCount;
             --comLives;
             cLives();
@@ -140,6 +142,8 @@ function startGame(){
             alert(`${playerSelect} < ${computerSelect}`);
             alert("You Lost");
             ++lostCount;
+            document.getElementById('playersChoosen').style.border = 'solid 5px red';
+            document.getElementById('computersChoosen').style.border = 'solid 5px green'; 
             document.getElementById("lostCount").innerText=lostCount;
             --playLives;
             pLives();
