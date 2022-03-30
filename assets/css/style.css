@@ -4,9 +4,8 @@ body{
 }
 #hands-container{
     overflow: hidden;
-    height: 12em;
+    height: 13em;
     width: 90%;
-    background-color: aqua;
 }
 #name-container{
     overflow: hidden;
@@ -18,26 +17,28 @@ body{
     overflow: hidden;
     height: 325px;
     width: 90%;
-    background-color: rgb(234, 0, 255);
 }
 #score-container{
     overflow: hidden;
     height: 70px;
     width: 90%;
-    background-color: rgb(255, 0, 106);
 }
 /*----hand selection content----*/
 .handBox{
+    background-color: gray;
+    border: solid 2px rgb(0, 81, 255);
+    border-radius:50%;
     display:inline-block;
     height: 140px;
     width: 140px;
-    background-color: rgb(24, 194, 100);
 }
 #rock{
     position:fixed;
     top: 4%;
     left:14%;
     background-image: url("../images/rock.png");
+    background-position-x:40% ;
+    background-position-y:40% ;
     background-size: 90%;
     background-repeat: no-repeat;
 }
@@ -53,6 +54,8 @@ body{
     top: 4%;
     left:28.2%;
     background-image: url("../images/lizard.png");
+    background-position-x:40% ;
+    background-position-y:40% ;
     background-size: 90%;
     background-repeat: no-repeat;
 }
@@ -68,7 +71,10 @@ body{
     top: 4%;
     left:42.5%;
     background-image: url("../images/spock.png");
-    background-size: 90%;
+    background-position-x:90% ;
+    background-position-y:40% ;
+    transform:rotateZ(10deg);
+    background-size: 85%;
     background-repeat: no-repeat;
 }
 #spock:hover{
@@ -83,6 +89,8 @@ body{
     top: 4%;
     right:32.5%;
     background-image: url("../images/paper.png");
+    background-position-x:60% ;
+    background-position-y:40% ;
     background-size: 60%;
     background-repeat: no-repeat;
 }
@@ -98,7 +106,9 @@ body{
     top: 4%;
     right:18%;
     background-image: url("../images/scissors.png");
-    background-size: 100%;
+    background-position-x:60% ;
+    background-position-y:40% ;
+    background-size: 96%;
     background-repeat: no-repeat;
 }
 #scissors:hover{
@@ -108,16 +118,37 @@ body{
     height: 180px;
     width: 180px;
 }
+.Label{
+    background-color: rgb(0, 81, 255);
+    color: #fff;
+    text-align: center;
+    margin: 150px 0 0 28px;
+    height:15% ;
+    width: 60%;
+    border-radius: 20px;
+}
+.Label:hover{
+    background-color:transparent;
+    color: #fff;
+    text-align: center;
+    margin: 150px 0 0 28px;
+    height:15% ;
+    width: 60%;
+    border-radius: 20px;
+}
+#spockLabel{
+    transform:rotateZ(-10deg);
+    margin: 150px 0 0 40px;
+}
 /*----name and status boxs----*/
 .nameBox{
     display: inline-block;
     height: 40px;
     width: 24%;
-    background-color: rgb(24, 194, 100);
 }
 #userName{
     text-transform: uppercase;
-    color: rgb(14, 7, 112);
+    color: #fff;
     text-align: center;
     position:relative;
     top: 0.4%;
@@ -125,7 +156,7 @@ body{
 }
 #statusBox{
     text-transform: capitalize;
-    color: rgb(14, 7, 112);
+    color:#fff;
     text-align: center;
     position:relative;
     top: 0.5%;
@@ -133,11 +164,10 @@ body{
     display: inline-block;
     height: 40px;
     width: 10%;
-    background-color: rgb(24, 194, 100);
 }
 #comName{
     text-transform: uppercase;
-    color: rgb(14, 7, 112);
+    color:#fff;
     text-align: center;
     position:relative;
     top: 0%;
@@ -148,7 +178,6 @@ body{
     display: inline-block;
     height: 250px;
     width: 50px;
-    background-color: rgb(24, 194, 100);
 }
 #playerLives{
     position:absolute;
@@ -164,9 +193,12 @@ body{
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    border:solid 5px rgb(14, 7, 112);
+    border:solid 5px rgb(0, 81, 255);;
 }
 .fa-solid{
+    position: relative;
+    top:10%;
+    left:10%;
     text-align: center;
     color: red;
     font-size: 30px;
@@ -175,26 +207,29 @@ body{
 #playerSelection{
     position:absolute;
     left: 24.2%;
-    background-image: url("../images/spock.png");
-    background-size: 90%;
-    background-repeat: no-repeat;
 }
 #comSelection{
     display:inline-block;
     position:absolute;
     right: 28.5%;
-    background-image: url("../images/scissors.png");
-    background-size: 90%;
-    background-repeat: no-repeat;
 }
 .pickedBox{
     height: 250px;
     width: 250px;
-    background-color: rgb(24, 194, 100);
 }
 /*------text in the box----*/
 .selected{
-    background-color: brown;
+    margin: 20px 0 0 0;
+    height:250px;
+    width: 250px;
+    border-radius: 50%;
+    border: solid 2px blue;
+    background-image: url("../images/spock.png");
+    background-position-x:90% ;
+    background-position-y:40% ;
+    transform:rotateZ(10deg);
+    background-size: 85%;
+    background-repeat: no-repeat;
 }
 /*----borderline seperating selected hands-----*/
 #centerFold{
@@ -206,7 +241,6 @@ left:47.5%;
 display: inline-block;
 height: 250px;
 width: 3%;
-background-color: rgb(24, 194, 100);
 }
 /*-------Start Button begins the logic-------*/
 #startButton{
@@ -219,8 +253,7 @@ background-color: rgb(24, 194, 100);
     text-align: center;
     display: inline-block;
     height: 50px;
-    width: 250px;
-    background-color: rgb(24, 194, 100); 
+    width: 250px; 
 }
 #winBox{
     position: relative;
@@ -235,8 +268,7 @@ background-color: rgb(24, 194, 100);
     text-size-adjust: 20px;
     display: inline-block;
     height: 50px;
-    width: 50px;
-    background-color: rgb(24, 194, 100); 
+    width: 50px; 
 }
 #winCount{
     position: relative;
@@ -350,8 +382,7 @@ background-color: rgb(24, 194, 100);
             text-align: center;
             display: inline-block;
             height: 50px;
-            width: 250px;
-            background-color: rgb(24, 194, 100); 
+            width: 250px; 
         }
         #winBox{
             position: relative;
@@ -367,7 +398,6 @@ background-color: rgb(24, 194, 100);
             display: inline-block;
             height: 50px;
             width: 50px;
-            background-color: rgb(24, 194, 100); 
         }
         #winCount{
             position: relative;
@@ -550,7 +580,6 @@ background-color: rgb(24, 194, 100);
         display: inline-block;
         height: 50px;
         width: 160px;
-        background-color: rgb(24, 194, 100);
     }
     #playerLives{
         position:fixed;
