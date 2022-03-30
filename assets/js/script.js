@@ -56,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function(){
     for(let button of hands){
         button.addEventListener("click",function(){
     
+
+            if(playLives > 0 && comLives > 0){}
+    
            
             if(this.getAttribute("data-type") ==="submit"){
                 if(playerSelect== 0){
@@ -122,17 +125,59 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function startGame(){
-    if(playerSelect > computerSelect){
-        alert(`${playerSelect} > ${computerSelect}`);
-        alert("You win");
-        ++winCount;
-        --comLives;
+    if(playLives > 0 && comLives > 0){
 
+        if(playerSelect > computerSelect){
+            alert(`${playerSelect} > ${computerSelect}`);
+            alert("You win");
+            ++winCount;
+            document.getElementById("winCount").innerText=winCount;
+            --comLives;
+            cLives();
+
+        }
+        else if(playerSelect < computerSelect){
+            alert(`${playerSelect} < ${computerSelect}`);
+            alert("You Lost");
+            ++lostCount;
+            document.getElementById("lostCount").innerText=lostCount;
+            --playLives;
+            pLives();
+        }
+        else{
+            alert(`${playerSelect} = ${computerSelect}`);
+            alert("Its a Draw");
+        }
+        
+        
     }
-    else if(playerSelect < computerSelect){
-        alert(`${playerSelect} < ${computerSelect}`);
-        alert("You Lost");
-        ++lostCount;
-        --playLives;
+    else if(playLives=0){
+        alert("Game over")
+    }
+    else {
+        alert("You beat the computer")
+    }
+    console.log(`player lives ${playLives} and computer lives ${comLives}`)
+
+
+}
+ 
+function pLives(){
+    switch (playLives){
+        case 3: document.getElementById("playLifeOne").style.color="green";
+                document.getElementById("playLifeTwo").style.color="green";
+                document.getElementById("playLifeThree").style.color="green";;break;
+        case 2: document.getElementById("playLifeOne").style.color="#fff";break;
+        case 1: document.getElementById("playLifeTwo").style.color="#fff";break;
+        case 0: document.getElementById("playLifeThree").style.color="#fff";break;
+    }
+}
+
+function cLives(){
+    switch (comLives){
+        case 3: document.getElementById("playLifeOne playLifeTwo playLifeThree").style.color="green";break;
+        case 2: document.getElementById("comLifeOne").style.color="#fff";break;
+        case 1: document.getElementById("comLifeTwo").style.color="#fff";break;
+        case 0: document.getElementById("comLifeThree").style.color="#fff";break;
     }
 }

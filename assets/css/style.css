@@ -199,8 +199,25 @@ body{
     top:10%;
     left:10%;
     text-align: center;
-    color: red;
     font-size: 30px;
+}
+#playLifeOne{
+    color: red;
+}
+#playLifeTwo{
+    color: red;
+}
+#playLifeThree{
+    color: red;
+}
+#comLifeOne{
+    color: red;
+}
+#comLifeTwo{
+    color: red;
+}
+#comLifeThree{
+    color: red;
 }
 /*------users choosen hand display----*/ 
 #playerSelection{
@@ -298,11 +315,13 @@ width: 3%;
     width: 50px; 
 }
 #winCount{
+    font-size: 100%;
     position: relative;
     left:20%;
     color:green;
 }
 #lostCount{
+    font-size: 100%;
     position: relative;
     left:20%;
     color: red;
