@@ -9,8 +9,6 @@
  * so 1>0 you win, 1<2 you lose, 1=1 its a draw
  *  */ 
 let rock=0, lizard=0, spock=0, paper=0, scissors= 0;
-let playerPick ="";
-let comPick="";
 
 function clear(){
     rock=0, lizard=0, spock=0, paper=0, scissors= 0;
@@ -21,7 +19,7 @@ function clear(){
     comPick = document.getElementById("computersChoosen").innerHTML;
     comPick.innerHTML='<div id="comWait">?</div>'
     */
-};
+}
 /**
  * these hold the selected numerical values based on hand selection
  * the players variable is set depending on the icon selction and
@@ -68,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(){
            
             if(this.getAttribute("data-type") ==="submit"){
                 if(playerSelect== 0){
-                    alert("Please pick a hand")
+                    alert("Please pick a hand");
                 }
                 else if(playerSelect != 0){
                      /**
@@ -76,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(){
                       */
                 
                    let random = Math.floor(Math.random()*5)+1;
-                   alert(`computer selected ${random}`)
+                   alert(`computer selected ${random}`);
                    let icon=random;
                    switch(icon){
                        case 1 : document.getElementById('computersChoosen').innerHTML='<div id="rocky"></div>'; break;
@@ -94,9 +92,9 @@ document.addEventListener("DOMContentLoaded", function(){
                         case 5 : computerSelect= scissors; break;
                         default: alert("The computer crashed!"), clear();
                     }
-                    alert(`computer selected ${computerSelect}`)
+                    alert(`computer selected ${computerSelect}`);
                     console.log(computerSelect);
-                    alert("StartGame")
+                    alert("StartGame");
                     startGame();
                 }
             } 
@@ -127,24 +125,24 @@ document.addEventListener("DOMContentLoaded", function(){
              }
              else if(this.getAttribute("data-type") ==="paper"){
                 alert("you selected paper");
-                console.log("you selected paper")
+                console.log("you selected paper");
                 paper=1,scissors=2,lizard=2;
                 playerSelect=paper;
                 document.getElementById('playersChoosen').innerHTML='<div id="wrap"></div>';
              }
              else if(this.getAttribute("data-type") ==="scissors"){
                 alert("you selected scissor");
-                console.log("you selected scissors")
+                console.log("you selected scissors");
                 scissors=1,rock=2,spock=2;
                 playerSelect=scissors;
                 document.getElementById('playersChoosen').innerHTML='<div id="cutting"></div>';
              }    
             else{
-                console.log("wrong selection ")
+                console.log("wrong selection ");
             }
-        })
+        });
     }
-})
+});
 
 function startGame(){
    
@@ -180,12 +178,12 @@ function startGame(){
         
     }
     else if(playLives=0){
-        alert("Game over")
+        alert("Game over");
     }
     else {
-        alert("You beat the computer")
+        alert("You beat the computer");
     }
-    console.log(`player lives ${playLives} and computer lives ${comLives}`)
+    console.log(`player lives ${playLives} and computer lives ${comLives}`);
 
 
 }
@@ -194,7 +192,7 @@ function pLives(){
     switch (playLives){
         case 3: document.getElementById("playLifeOne").style.color="green";
                 document.getElementById("playLifeTwo").style.color="green";
-                document.getElementById("playLifeThree").style.color="green";;break;
+                document.getElementById("playLifeThree").style.color="green";break;
         case 2: document.getElementById("playLifeOne").style.color="#fff";break;
         case 1: document.getElementById("playLifeTwo").style.color="#fff";break;
         case 0: document.getElementById("playLifeThree").style.color="#fff";break;

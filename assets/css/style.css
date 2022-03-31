@@ -363,7 +363,7 @@ width: 3%;
 }
 .countBox{
     text-align: center;
-    text-size-adjust: 20px;
+    font-size: 20px;
     display: inline-block;
     height: 50px;
     width: 50px; 
@@ -494,7 +494,7 @@ width: 3%;
         }
         .countBox{
             text-align: center;
-            text-size-adjust: 20px;
+            font-size: 20px;
             display: inline-block;
             height: 50px;
             width: 50px;
@@ -635,7 +635,6 @@ width: 3%;
         right:8%;
     }
     #scissors:hover{
-        transform: rotateX();
         position:fixed;
         top: 0%;
         right:2%;
