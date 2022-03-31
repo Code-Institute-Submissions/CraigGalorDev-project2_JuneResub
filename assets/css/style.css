@@ -241,24 +241,77 @@ body{
     border-radius: 50%;
 }
 #playersChoosen{
+   /* background-image:; */
+    background-size: 85%;
+    background-repeat: no-repeat;
+   /* background-color: gray; */
+    border: solid 2px blue;
+}
+#computersChoosen{
     background-image: url("");
-    background-position-x:90% ;
-    background-position-y:40% ;
-    transform:rotateZ(10deg);
     background-size: 85%;
     background-repeat: no-repeat;
     background-color: gray;
     border: solid 2px blue;
 }
-#computersChoosen{
-    background-image: url("");
-    background-position-x:90% ;
-    background-position-y:40% ;
-    transform:rotateZ(10deg);
+/**
+images for choosen hand area
+*/
+#rocky{
+    height:100% ;
+    width: 100%;
+    border-radius: 50%;
+    background-color: gray;
+    background-image: url("../images/rock.png");
+    background-position-x: 40%;
+    background-position-y: 40%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+#hssss{
+    height:100% ;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50%;
+    background-image: url("../images/lizard.png");
+    background-position-x: 40%;
+    background-position-y: 40%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+#vulcan{
+    height:100% ;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50%;
+    background-image: url("../images/spock.png");
+    background-position-x: 78%;
+    background-position-y: 40%;
+    transform: rotate(10deg);
     background-size: 85%;
     background-repeat: no-repeat;
+}
+#wrap{
+    height:100% ;
+    width: 100%;
     background-color: gray;
-    border: solid 2px blue;
+    border-radius: 50%;
+    background-image: url("../images/paper.png");
+    background-position-x: 60%;
+    background-position-y: 40%;
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+#cutting{
+    height:100% ;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50%;
+    background-image: url("../images/scissors.png");
+    background-position-x: 40%;
+    background-position-y: 40%;
+    background-size: 90%;
+    background-repeat: no-repeat;
 }
 /*----borderline seperating selected hands-----*/
 #centerFold{

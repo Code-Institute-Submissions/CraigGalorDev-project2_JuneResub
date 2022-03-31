@@ -1,3 +1,4 @@
+
 /**
  * these are the hand variables for the game
  * picking a specific hand will set the numerical values
@@ -38,6 +39,12 @@ let playerSelect=0,computerSelect=0;
  * this only counts the wins and losses
  */
 let winCount=0,lostCount=0;
+let wcount = document.getElementById('winCount');
+wcount.toString(winCount);
+let lcount = document.getElementById('lostCount');
+lcount.toString(lostCount);
+
+
 /**
  * to keep the game iteresting the player has 3 lives
  * each time the player loses a turn they lose a life but are still in the game
@@ -55,8 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for(let button of hands){
         button.addEventListener("click",function(){
-    
-
+            
             if(playLives > 0 && comLives > 0){}
     
            
@@ -68,8 +74,18 @@ document.addEventListener("DOMContentLoaded", function(){
                      /**
                       * this is were you start computer random selection
                       */
+                
                    let random = Math.floor(Math.random()*5)+1;
                    alert(`computer selected ${random}`)
+                   let icon=random;
+                   switch(icon){
+                       case 1 : document.getElementById('computersChoosen').innerHTML='<div id="rocky"></div>'; break;
+                       case 2 : document.getElementById('computersChoosen').innerHTML='<div id="hssss"></div>'; break;
+                       case 3 : document.getElementById('computersChoosen').innerHTML='<div id="vulcan"></div>'; break;
+                       case 4 :  document.getElementById('computersChoosen').innerHTML='<div id="wrap"></div>'; break;
+                       case 5 :  document.getElementById('computersChoosen').innerHTML='<div id="rocky"></div>'; break;
+                       default: alert("The computer crashed!"), clear();
+                   }
                     switch(random){
                         case 1 : computerSelect= rock; break;
                         case 2 : computerSelect= lizard; break;
@@ -90,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 console.log("you selected rock");
                 rock=1,spock=2,paper=2;
                 playerSelect=rock;
+                document.getElementById('playersChoosen').innerHTML='<div id="rocky"></div>';
+                
              }
             else if(this.getAttribute("data-type") ==="lizard"){
                 clear();
@@ -97,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 console.log("you selected lizard");
                 lizard=1,scissors=2,rock=2;
                 playerSelect=lizard;
+                document.getElementById('playersChoosen').innerHTML='<div id="hssss"></div>';
              } 
              else if(this.getAttribute("data-type") ==="spock"){
                 clear();
@@ -104,18 +123,21 @@ document.addEventListener("DOMContentLoaded", function(){
                 console.log("you selected spock");
                 spock=1,paper=2,lizard=2;
                 playerSelect=spock;
+                document.getElementById('playersChoosen').innerHTML='<div id="vulcan"></div>';
              }
              else if(this.getAttribute("data-type") ==="paper"){
                 alert("you selected paper");
                 console.log("you selected paper")
                 paper=1,scissors=2,lizard=2;
                 playerSelect=paper;
+                document.getElementById('playersChoosen').innerHTML='<div id="wrap"></div>';
              }
              else if(this.getAttribute("data-type") ==="scissors"){
                 alert("you selected scissor");
                 console.log("you selected scissors")
                 scissors=1,rock=2,spock=2;
                 playerSelect=scissors;
+                document.getElementById('playersChoosen').innerHTML='<div id="cutting"></div>';
              }    
             else{
                 console.log("wrong selection ")
@@ -125,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function startGame(){
+   
     if(playLives > 0 && comLives > 0){
 
         if(playerSelect > computerSelect){
@@ -146,6 +169,7 @@ function startGame(){
             document.getElementById('computersChoosen').style.border = 'solid 5px green'; 
             document.getElementById("lostCount").innerText=lostCount;
             --playLives;
+            document.getElementById('lostCount').style.fontSize = 20;
             pLives();
         }
         else{
