@@ -380,6 +380,14 @@ width: 3%;
     left:20%;
     color: red;
 }
+#victory{
+    font-size: 35px;
+    color: green;
+}
+#defeat{
+    font-size: 35px;
+    color: red;
+}
 /*----media queries----*/
 /*----------------------*/
 @media(max-width:1200px){
