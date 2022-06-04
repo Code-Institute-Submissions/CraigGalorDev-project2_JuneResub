@@ -9,17 +9,6 @@
  * so 1>0 you win, 1<2 you lose, 1=1 its a draw
  *  */ 
 let rock=0, lizard=0, spock=0, paper=0, scissors= 0;
-
-function clear(){
-    rock=0, lizard=0, spock=0, paper=0, scissors= 0;
-   /**  playerPick = document.getElementById("playersChoosen").innerHTML;
-    playerPick.style.backgroundUrl="";
-    playerPick.innerHTML='<div id="playWait">Please Pick a hand</div>';
-
-    comPick = document.getElementById("computersChoosen").innerHTML;
-    comPick.innerHTML='<div id="comWait">?</div>'
-    */
-}
 /**
  * these hold the selected numerical values based on hand selection
  * the players variable is set depending on the icon selction and
@@ -30,24 +19,51 @@ function clear(){
  * computerSelect string value of "rock" etc will equal the current numerical
  * value set for that hand for this iteration.
  */
-let playerSelect = 0,computerSelect = 0;
-/**
- * The win and lost counters are set each iteration(Start button being clicked)
- * as stated above the winners hand has a greater numerical value than the loser
- * this only counts the wins and losses
- */
-let winCount = 0, lostCount = 0;
-
-
-
-/**
+ let playerSelect = 0,computerSelect = 0;
+ /**
+  * The win and lost counters are set each iteration(Start button being clicked)
+  * as stated above the winners hand has a greater numerical value than the loser
+  * this only counts the wins and losses
+  */
+ let winCount = 0, lostCount = 0;
+ /**
  * to keep the game iteresting the player has 3 lives
  * each time the player loses a turn they lose a life but are still in the game
  * only when all 3 lives a spent is the game over or if the computers lives are
  * spent do you complete the game and have beaten the computer.
  * (later versions should include chances to win a life back e.g. 3 straight wins = 1 life)
  */
-let playLives = 0, comLives = 3;
+let playLives = 3, comLives = 3;
+
+function clear(){
+    rock=0, lizard=0, spock=0, paper=0, scissors= 0;
+   /**  playerPick = document.getElementById("playersChoosen").innerHTML;
+    playerPick.style.backgroundUrl="";
+    playerPick.innerHTML='<div id="playWait">Please Pick a hand</div>';
+
+    comPick = document.getElementById("computersChoosen").innerHTML;
+    comPick.innerHTML='<div id="comWait">?</div>'
+    */
+    playerSelect = 0, computerSelect = 0;
+    playLives = 3, comLives = 3;
+    document.getElementById("startButton").innerText = "START"
+}
+function restart(){
+    rock=0, lizard=0, spock=0, paper=0, scissors= 0;
+    playerSelect = 0, computerSelect = 0;
+    playLives = 3, comLives = 3;
+    document.getElementById("startButton").innerText = "START"
+    document.getElementById('playersChoosen').innerHTML='<div id="selectionAfter"></div>';
+    document.getElementById('computersChoosen').innerHTML='<div id="selectionAfter"></div>';
+    document.getElementById('playersChoosen').style.border = 'solid 5px rgb(13, 162, 221)';
+    document.getElementById('computersChoosen').style.border = 'solid 5px blue'; 
+    pLives();
+    cLives();
+}
+
+
+
+
 
 /**
  * selecting a hand type
@@ -147,63 +163,56 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function startGame(){
     gameStatus = document.getElementById("startButton").innerText;
-    alert(gameStatus)
+    
     if (gameStatus == "START"){
-        if(playLives == 0){
-            document.getElementById("status").innerText = "Game over";
-            document.getElementById("startButton").innerText = "Restart";
-            alert("You lost the game")
-        }
-        else if (comLives == 0) {
-            document.getElementById("status").innerText = "Game over";
-            document.getElementById("startButton").innerText = "Restart";
-            alert("You beat the computer");
-        }
-        else{
-    /*
-            if(playerSelect > computerSelect){
-                document.getElementById("status").innerText = "You won";
+        if(playerSelect > computerSelect){
+            document.getElementById("status").innerText = "You won";
+            document.getElementById('playersChoosen').style.border = 'solid 5px green';
+            document.getElementById('computersChoosen').style.border = 'solid 5px red'; 
+            --comLives;
+            cLives();
+            if (comLives == 0) {
                 ++winCount;
-                document.getElementById('playersChoosen').style.border = 'solid 5px green';
-                document.getElementById('computersChoosen').style.border = 'solid 5px red'; 
-                --comLives;
-                cLives();
                 document.getElementById("victory").innerText = winCount;
                 document.getElementById("victory").innerText.toString;
-            
-
+                document.getElementById("status").innerText = "Game over";
+                document.getElementById("startButton").innerText = "Restart";
+                document.getElementById("status").innerText = "You beat the computer";
             }
-            else if(playerSelect < computerSelect){
-                document.getElementById("status").innerText = "You Lost";
+        }
+        else if(playerSelect < computerSelect){
+            document.getElementById("status").innerText = "You Lost";
+            document.getElementById('playersChoosen').style.border = 'solid 5px red';
+            document.getElementById('computersChoosen').style.border = 'solid 5px green'; 
+            --playLives;
+            pLives();
+            if(playLives == 0){
                 ++lostCount;
-                document.getElementById('playersChoosen').style.border = 'solid 5px red';
-                document.getElementById('computersChoosen').style.border = 'solid 5px green'; 
-                --playLives;
-                pLives();
                 document.getElementById("defeat").innerText = lostCount;
                 document.getElementById("defeat").innerText.toString;
+                document.getElementById("status").innerText = "Game over";
+                document.getElementById("startButton").innerText = "Restart";
+                document.getElementById("status").innerText = "Defeated";
             }
-            else{
-                document.getElementById("status").innerText = "Draw";
-                document.getElementById('playersChoosen').style.border = 'solid 5px gray';
-                document.getElementById('computersChoosen').style.border = 'solid 5px gray';
-            }  
-            */  
-        alert("game on")
         }
+        else{
+            document.getElementById("status").innerText = "Draw";
+            document.getElementById('playersChoosen').style.border = 'solid 5px black';
+            document.getElementById('computersChoosen').style.border = 'solid 5px black';
+        }  
     }
     else{
-        alert("restart initiating")
+        
     /* refresh page*/
-    window.location.reload();
+    restart();
     }
 }
  
 function pLives(){
     switch (playLives){
-        case 3: document.getElementById("playLifeOne").style.color="green";
-                document.getElementById("playLifeTwo").style.color="green";
-                document.getElementById("playLifeThree").style.color="green";break;
+        case 3: document.getElementById("playLifeOne").style.color="red";
+                document.getElementById("playLifeTwo").style.color="red";
+                document.getElementById("playLifeThree").style.color="red";break;
         case 2: document.getElementById("playLifeOne").style.color="#fff";break;
         case 1: document.getElementById("playLifeTwo").style.color="#fff";break;
         case 0: document.getElementById("playLifeThree").style.color="#fff";break;
@@ -212,7 +221,9 @@ function pLives(){
 
 function cLives(){
     switch (comLives){
-        case 3: document.getElementById("playLifeOne playLifeTwo playLifeThree").style.color="green";break;
+        case 3: document.getElementById("comLifeOne").style.color="red";
+                document.getElementById("comLifeTwo").style.color="red";
+                document.getElementById("comLifeThree").style.color="red";break;
         case 2: document.getElementById("comLifeOne").style.color="#fff";break;
         case 1: document.getElementById("comLifeTwo").style.color="#fff";break;
         case 0: document.getElementById("comLifeThree").style.color="#fff";break;
