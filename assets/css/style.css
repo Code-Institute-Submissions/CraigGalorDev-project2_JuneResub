@@ -1,6 +1,6 @@
 /*----main body content----*/
 body{
-    margin: 0 0% 0 0%;
+    margin: 0 0% 0 5%;
 }
 header{
     height: 2em;
@@ -20,7 +20,7 @@ hr{
 }
 #hands-container{
     overflow: hidden;
-    height: 12.4em;
+    height: 12.6em;
     width: 90%;
     background-color: blueviolet;
 }
@@ -81,7 +81,7 @@ hr{
     background-repeat: no-repeat;
 }
 #lizard:hover{
-    margin: 2px 0 0 220px;
+    margin: 0.2% 0 0 20.8%;
     height: 180px;
     width: 180px;
 }
@@ -96,7 +96,7 @@ hr{
     background-repeat: no-repeat;
 }
 #spock:hover{
-    margin: 2px 0 0 420px;
+    margin: 0.2% 0 0 38%;
     height: 180px;
     width: 180px;
 }
@@ -110,13 +110,13 @@ hr{
     background-repeat: no-repeat;
 }
 #paper:hover{
-    margin: 2px 0 0 620px;
+    margin: 0.2% 0 0 55.8%;
     height: 180px;
     width: 180px;
 }
 #scissors{
     position: fixed;
-    margin: 1.5% 0 0 70%;
+    margin: 1.5% 0 0 73%;
     background-image: url("../images/scissors.png");
     background-position-x:60% ;
     background-position-y:40% ;
@@ -124,7 +124,7 @@ hr{
     background-repeat: no-repeat;
 }
 #scissors:hover{
-    margin: 2px 0 0 820px;
+    margin: 0.2% 0 0 71.5%;
     height: 180px;
     width: 180px;
 }
@@ -359,7 +359,8 @@ images for choosen hand area
 }
 /*-------Start Button begins the logic-------*/
 #startButton{
-    margin: 0 0 0 43%;
+    position:fixed;
+    margin: 0 0 0 39.5%;
     float:left;
     height:30px ;
     width: 130px;
@@ -368,7 +369,8 @@ images for choosen hand area
     color: #fff;
 }
 #startButton:hover{
-    margin: 0 0 0 43%;
+    position:fixed;
+    margin: 0 0 0 39.5%;
     float:left;
     height:30px ;
     width: 130px;
@@ -384,19 +386,20 @@ images for choosen hand area
     text-align: center;
     height: 50px;
     width: 250px; 
-    background-color: maroon;
 }
 #winBox{
-    margin: 0 0 0 16.5%;
+    position: fixed;
+    left:17%;
     background-color: blueviolet;
 }
 #lostBox{
-    margin: 0 0 0 2.5%;
+    position: fixed;
+    margin: 0 0 0 57.8%;
     background-color: blueviolet;
 }
 .countBox{
+    position: fixed;
     text-align: center;
-    margin: 0 0 0 0;
     font-size: 20px;
     display: inline-block;
     height: 50px;
@@ -404,13 +407,15 @@ images for choosen hand area
     background-color:orange;
 }
 #winCount{
-    margin: 1% 0 0 2%;
+    position:fixed;
+    left:36%;
     height: 20px;
     color:green;
-    
+    background-color: black;
 }
 #lostCount{
-    margin: 1% 0 0 3%;
+    position: fixed;
+    margin: 0.3% 0 0 53.5%;
     color: red;
 }
 #victory{
@@ -428,3 +433,140 @@ images for choosen hand area
 /*----media queries----*/
 /*----------------------*/
 
+@media only screen and (max-width:1214px) {
+    #winCount{
+        position:fixed;
+        left:38.5%;
+    }
+    #lostCount{
+        position: fixed;
+        margin: 0.3% 0 0 50.5%;
+    }
+    #lostBox{
+        position: fixed;
+        margin: 0 0 0 55.8%;
+    }
+    #startButton{
+        position:fixed;
+        margin: 0 0 0 38.7%;
+    }
+    #startButton:hover{
+        position:fixed;
+        margin: 0 0 0 38.7%;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 55.6%;
+    }
+    #comLives{
+        position:fixed;
+        margin: 0 0 0 80.8%; 
+    }
+}
+@media only screen and (max-width:1111px){
+    #winCount{
+        position:fixed;
+        left:39.5%;
+    }
+    #lostCount{
+        position: fixed;
+        margin: 0.3% 0 0 50%;
+    }
+    #lostBox{
+        position: fixed;
+        margin: 0 0 0 54.8%;
+    }
+    #rock{
+        position:fixed;
+        margin: 1.5% 0 0 3%;
+    }
+    #rock:hover{
+        margin: 0.2% 0 0 1%;
+    }
+    #lizard{
+        position: fixed;
+        margin: 1.5% 0 0 20%;
+    }
+    #lizard:hover{
+        margin: 0.2% 0 0 18.8%;
+    }
+    #spock{
+        position: fixed;
+        margin: 1.5% 0 0 37.3%;
+    }
+    #spock:hover{
+        margin: 0.2% 0 0 36%;
+    }
+    #paper{
+        position: fixed;
+        margin: 1.5% 0 0 54.5%;
+    }
+    #paper:hover{
+        margin: 0.2% 0 0 52.8%;
+    }
+    #scissors{
+        position: fixed;
+        margin: 1.5% 0 0 71%;
+    }
+    #scissors:hover{
+        margin: 0.2% 0 0 69.5%;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 53.6%;
+    }
+    #comLives{
+        position:fixed;
+        margin: 0 0 0 80%; 
+    }
+    #playerSelection{
+        position: fixed;
+        margin: 0 0 0 11%;
+    }
+    #playerLives{
+        position:fixed;
+        margin: 0 0 0 3%;   
+        
+       
+    }
+}
+@media only screen and (max-width:1080px){
+    #comLives{
+        position:fixed;
+        margin: 0 0 0 81.5%; 
+    }
+    #playerSelection{
+        position: fixed;
+        margin: 0 0 0 10%;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 54.3%;
+    }
+    #startButton{
+        position:fixed;
+        margin: 0 0 0 37.7%;
+    }
+    #startButton:hover{
+        position:fixed;
+        margin: 0 0 0 37.7%;
+    }
+    #winBox{
+        position: fixed;
+        left:15%;
+    }
+    #winCount{
+        position:fixed;
+        left:38.3%;
+    }
+    #playerLives{
+        position:fixed;
+        margin: 0 0 0 2%;    
+    }
+}
+@media only screen and (max-width:1000px){
+    #comLives{
+        position:fixed;
+        margin: 0 0 0 83%; 
+    }
+}
