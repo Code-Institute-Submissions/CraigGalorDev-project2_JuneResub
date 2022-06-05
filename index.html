@@ -8,6 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul >
+                <li class="options">How To Play</li>
+                <li class="options">Enter Name</li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <section>
     <div id="hands-container">
         <button data-type="rock" id="rock" class="handBox">
             <div class="Label">Rock</div>
@@ -46,22 +56,25 @@
             <div id="computersChoosen" class="selected">
 
             </div>
-        </div>
-        <button data-type="submit" id="startButton" >Start</button> 
+        </div> 
         <div id="comLives" class="livesBox">
             <div  class="life"><i  id="comLifeOne" class="fa-solid fa-heart-circle-plus"></i></div>
             <div  class="life"><i  id="comLifeTwo" class="fa-solid fa-heart-circle-plus"></i></div>
             <div  class="life"><i  id="comLifeThree" class="fa-solid fa-heart-circle-plus"></i></div>
         </div>
+    </div>
+    <div id="start-container">
+        <button data-type="submit" id="startButton" >Start</button>
     </div>   
     <div id="score-container">
         <div id="winBox" class="scoreBox"><h1>WINS</h1></div>
-        <span id="winCount" class="countBox"><p id="victory">0</p></div>
-        <span id="lostCount" class="countBox"><p id="defeat">0</p></div>
+        <div id="winCount" class="countBox"><p id="victory">0</p></div>
+        <div id="lostCount" class="countBox"><p id="defeat">0</p></div>
         <div id="lostBox" class="scoreBox"><h1>LOST</h1></div>
     </div>
     <script src="assets/js/script.js"></script>
     <!---copied over font awsome link from last project-->
     <script src="https://kit.fontawesome.com/d88aa43aec.js" crossorigin="anonymous"></script> 
+</section>
 </body>
 </html>

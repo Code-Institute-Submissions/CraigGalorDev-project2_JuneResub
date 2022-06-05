@@ -59,6 +59,7 @@ function restart(){
     document.getElementById('computersChoosen').style.border = 'solid 5px blue'; 
     pLives();
     cLives();
+    document.getElementById("status").innerText = "VS";
 }
 
 
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function(){
             
                 if(this.getAttribute("data-type") ==="submit"){
                     if(playerSelect== 0){
-                        alert("Please pick a hand");
+                        document.getElementById("status").innerText = "Pick a Hand";
                     }
                     else if(playerSelect != 0){
                         /**
@@ -112,8 +113,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 } 
                 else if(this.getAttribute("data-type") ==="rock"){
                     clear();
-                    alert("you selected rock");
-                    console.log("you selected rock");
+                    document.getElementById("status").innerText = "selected rock";
                     rock=1,spock=2,paper=2;
                     playerSelect=rock;
                     document.getElementById('playersChoosen').innerHTML='<div id="rocky"></div>';
@@ -121,30 +121,26 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
                 else if(this.getAttribute("data-type") ==="lizard"){
                     clear();
-                    alert("you selected lizard");
-                    console.log("you selected lizard");
+                    document.getElementById("status").innerText = "selected lizard";
                     lizard=1,scissors=2,rock=2;
                     playerSelect=lizard;
                     document.getElementById('playersChoosen').innerHTML='<div id="hssss"></div>';
                 } 
                 else if(this.getAttribute("data-type") ==="spock"){
                     clear();
-                    alert("you selected spock");
-                    console.log("you selected spock");
+                    document.getElementById("status").innerText = "selected spock";
                     spock=1,paper=2,lizard=2;
                     playerSelect=spock;
                     document.getElementById('playersChoosen').innerHTML='<div id="vulcan"></div>';
                 }
                 else if(this.getAttribute("data-type") ==="paper"){
-                    alert("you selected paper");
-                    console.log("you selected paper");
+                    document.getElementById("status").innerText = "selected paper";
                     paper=1,scissors=2,lizard=2;
                     playerSelect=paper;
                     document.getElementById('playersChoosen').innerHTML='<div id="wrap"></div>';
                 }
                 else if(this.getAttribute("data-type") ==="scissors"){
-                    alert("you selected scissor");
-                    console.log("you selected scissors");
+                    document.getElementById("status").innerText = "selected scissors";
                     scissors=1,rock=2,spock=2;
                     playerSelect=scissors;
                     document.getElementById('playersChoosen').innerHTML='<div id="cutting"></div>';
@@ -177,7 +173,7 @@ function startGame(){
                 document.getElementById("victory").innerText.toString;
                 document.getElementById("status").innerText = "Game over";
                 document.getElementById("startButton").innerText = "Restart";
-                document.getElementById("status").innerText = "You beat the computer";
+                document.getElementById("status").innerText = "Victory";
             }
         }
         else if(playerSelect < computerSelect){
