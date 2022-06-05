@@ -1,6 +1,6 @@
 /*----main body content----*/
 body{
-    margin: 0 5% 0 10%;
+    margin: 0 0% 0 0%;
 }
 header{
     height: 2em;
@@ -59,7 +59,7 @@ hr{
 }
 #rock{
     position:fixed;
-    margin: 20px 0 0 3.8%;
+    margin: 20px 0 0 5%;
     background-image: url("../images/rock.png");
     background-position-x:40% ;
     background-position-y:40% ;
@@ -73,7 +73,7 @@ hr{
 }
 #lizard{
     position: fixed;
-    margin: 20px 0 0 240px;
+    margin: 1.5% 0 0 22%;
     background-image: url("../images/lizard.png");
     background-position-x:40% ;
     background-position-y:40% ;
@@ -87,7 +87,7 @@ hr{
 }
 #spock{
     position: fixed;
-    margin: 20px 0 0 440px;
+    margin: 1.5% 0 0 39.3%;
     background-image: url("../images/spock.png");
     background-position-x:90% ;
     background-position-y:40% ;
@@ -102,7 +102,7 @@ hr{
 }
 #paper{
     position: fixed;
-    margin: 20px 0 0 640px;
+    margin: 1.5% 0 0 57%;
     background-image: url("../images/paper.png");
     background-position-x:60% ;
     background-position-y:40% ;
@@ -116,7 +116,7 @@ hr{
 }
 #scissors{
     position: fixed;
-    margin: 20px 0 0 840px;
+    margin: 1.5% 0 0 70%;
     background-image: url("../images/scissors.png");
     background-position-x:60% ;
     background-position-y:40% ;
@@ -157,13 +157,16 @@ hr{
     background-color: black;
 }
 #userName{
-    margin: 0 0 0 15.5%;
+    position: fixed;
+    margin: 0 0 0 9.7%;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
     background-color: orange;
 }
 #statusBox{
+    position:fixed;
+    margin: 0 0 0 34.3%;
     text-transform: capitalize;
     color:#fff;
     text-align: center;
@@ -173,6 +176,8 @@ hr{
     background-color: red;
 }
 #comName{
+    position: fixed;
+    margin: 0 0 0 54.8%;
     text-transform: uppercase;
     color:#fff;
     text-align: center;
@@ -186,13 +191,15 @@ hr{
     width: 50px;
 }
 #playerLives{
- margin: 0 0 0 4%;   
- float: left;
- background-color: lightgreen;
+    position:fixed;
+    margin: 0 0 0 4%;   
+    float: left;
+    background-color: lightgreen;
    
 }
 #comLives{
-    margin: 0 0 0 6.5%; 
+    position:fixed;
+    margin: 0 0 0 81.8%; 
     float: left;
     background-color: darkorchid;
 }
@@ -231,12 +238,14 @@ hr{
 }
 /*------users choosen hand display----*/ 
 #playerSelection{
-    margin: 0 0 0 5%;
+    position: fixed;
+    margin: 0 0 0 12%;
     float: left;
     background-color: orangered;
 }
 #comSelection{
-    margin: 0 0 0 9.4%;
+    position: fixed;
+    margin: 0 0 0 57.3%;
     float: left;
     display:inline-block;
     background-color: blueviolet;
@@ -337,14 +346,16 @@ images for choosen hand area
 }
 /*----borderline seperating selected hands-----*/
 #centerFold{
-margin: 0 0 0 10%;
-float:left;
-border-left: solid 3px rgb(14, 7, 112);
-border-right: solid 3px rgb(14, 7, 112);
-border-style: groove;
-display: inline-block;
-height: 250px;
-width: 3%;
+    position: fixed;
+    margin: 0 0 0 42.5%;
+    float:left;
+    border-left: solid 3px rgb(14, 7, 112);
+    border-right: solid 3px rgb(14, 7, 112);
+    border-style: groove;
+    display: inline-block;
+    height: 250px;
+    width: 3%;
+    background-color: blueviolet;
 }
 /*-------Start Button begins the logic-------*/
 #startButton{
