@@ -128,27 +128,6 @@ hr{
     height: 180px;
     width: 180px;
 }
-.Label{
-    background-color: rgb(0, 81, 255);
-    color: #fff;
-    text-align: center;
-    margin: 110% 0 0 18%;
-    height:15% ;
-    width: 60%;
-    border-radius: 20px;
-}
-.Label:hover{
-    background-color:transparent;
-    color: #fff;
-    text-align: center;
-    height:15% ;
-    width: 60%;
-    border-radius: 20px;
-}
-#spockLabel{
-    transform:rotateZ(-10deg);
-    margin: 110% 0 0 29%;
-}
 /*----name and status boxs----*/
 .nameBox{
     display: inline-block;
@@ -568,5 +547,207 @@ images for choosen hand area
     #comLives{
         position:fixed;
         margin: 0 0 0 83%; 
+    }
+}
+@media only screen and (max-width:950px){
+    #start-container{
+        height:80px;
+        width:90%;
+        background-color: aqua;
+    
+    }
+    .livesBox{
+        display: inline-block;
+        height: 50px;
+        width: 250px;
+    }
+    #playerLives{
+        position:fixed;
+        top:685px;
+        left:12%    
+    }
+    #comLives{
+        position:fixed;
+        top:685px;
+        margin: 0 0 0 60.5%; 
+    }
+    .life{
+        display: inline-block;
+        margin: 0 0 0 4%;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        border:solid 5px rgb(0, 81, 255);;
+    }
+    .fa-solid{
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    #centerFold{
+        position: fixed;
+        margin: 0 0 0 44.5%;
+       
+    }
+    #name-container{
+        margin: 0 0 0 2.2%;
+        overflow: hidden;
+        height: 44px;
+        width: 90%;
+        background-color: rgb(0, 81, 255);
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 55.6%;
+    }
+    #playerSelection{
+        position: fixed;
+        margin: 0 0 0 10%;
+    }
+    #hands-container{
+        height: 20.6em;
+    }
+    .handBox{
+        background-color: gray;
+        border: solid 2px rgb(0, 81, 255);
+        border-radius:50%;
+        height: 140px;
+        width: 140px;
+    }
+    #rock{
+        position:fixed;
+        top:38px;
+        left:60px;
+    }
+    #rock:hover{
+        margin: 2px 0 0 40px;
+        height: 180px;
+        width: 180px;
+    }
+    #lizard{
+        position: fixed;
+        top:195px;
+        left:50px;
+    }
+    #lizard:hover{
+        position: fixed;
+        top:175px;
+        left:50px;
+        height: 180px;
+        width: 180px;
+    }
+    #spock{
+        position: fixed;
+        top:38px;
+        left:65px;
+    }
+    #spock:hover{
+        position: fixed;
+        top:38px;
+        left:60px;
+        height: 180px;
+        width: 180px;
+    }
+    #paper{
+        position: fixed;
+        top:195px;
+        left:70px;
+    }
+    #paper:hover{
+        position: fixed;
+        top:175px;
+        left:60px;
+        height: 180px;
+        width: 180px;
+    }
+    #scissors{
+        position: fixed;
+        top:38px;
+        left:70px;
+    }
+    #scissors:hover{
+        position: fixed;
+        top:38px;
+        left:20px;
+        height: 180px;
+        width: 180px;
+    }
+    #startButton{
+        position:fixed;
+        margin: 0 0 0 39.6%;
+    }
+    #startButton:hover{
+        position:fixed;
+        margin: 0 0 0 39.6%;
+    }
+    #winBox{
+        position: fixed;
+        left:15%;
+    }
+    #winCount{
+        position:fixed;
+        left:40.7%;
+    }
+}
+@media only screen and (max-width:850px){
+    .fa-solid{
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    #centerFold{
+        position: fixed;
+        margin: 0 0 0 46.5%;
+       
+    }
+    #name-container{
+        margin: 0 0 0 4.2%;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 55.6%;
+    }
+    #playerSelection{
+        position: fixed;
+        margin: 0 0 0 0%;
+    }
+    #startButton{
+        position:fixed;
+        margin: 0 0 0 40.6%;
+    }
+    #startButton:hover{
+        position:fixed;
+        margin: 0 0 0 40.6%;
+    }
+    #winBox{
+        position: fixed;
+        left:15%;
+    }
+    #winCount{
+        position:fixed;
+        left:40.7%;
+    }
+}
+@media only screen and (max-width:750px){
+    #centerFold{
+        position: fixed;
+        margin: 0 0 0 47.5%;
+       
+    }
+    #name-container{
+        margin: 0 0 0 5.2%;
+      
+    }
+    #startButton{
+        position:fixed;
+        margin: 0 0 0 40.6%;
+    }
+    #startButton:hover{
+        position:fixed;
+        margin: 0 0 0 40.6%;
+    }
+    #winCount{
+        position:fixed;
+        left:44.7%;
     }
 }

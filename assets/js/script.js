@@ -53,13 +53,13 @@ function restart(){
     playerSelect = 0, computerSelect = 0;
     playLives = 3, comLives = 3;
     document.getElementById("startButton").innerText = "START"
+    document.getElementById("status").innerText = "VS";
     document.getElementById('playersChoosen').innerHTML='<div id="selectionAfter"></div>';
     document.getElementById('computersChoosen').innerHTML='<div id="selectionAfter"></div>';
     document.getElementById('playersChoosen').style.border = 'solid 5px rgb(13, 162, 221)';
     document.getElementById('computersChoosen').style.border = 'solid 5px blue'; 
     pLives();
     cLives();
-    document.getElementById("status").innerText = "VS";
 }
 
 
@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 else if(this.getAttribute("data-type") ==="rock"){
                     clear();
                     document.getElementById("status").innerText = "selected rock";
+                    document.getElementById("startButton").innerText = "PLAY";
                     rock=1,spock=2,paper=2;
                     playerSelect=rock;
                     document.getElementById('playersChoosen').innerHTML='<div id="rocky"></div>';
@@ -122,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 else if(this.getAttribute("data-type") ==="lizard"){
                     clear();
                     document.getElementById("status").innerText = "selected lizard";
+                    document.getElementById("startButton").innerText = "PLAY";
                     lizard=1,scissors=2,rock=2;
                     playerSelect=lizard;
                     document.getElementById('playersChoosen').innerHTML='<div id="hssss"></div>';
@@ -129,18 +131,21 @@ document.addEventListener("DOMContentLoaded", function(){
                 else if(this.getAttribute("data-type") ==="spock"){
                     clear();
                     document.getElementById("status").innerText = "selected spock";
+                    document.getElementById("startButton").innerText = "PLAY";
                     spock=1,paper=2,lizard=2;
                     playerSelect=spock;
                     document.getElementById('playersChoosen').innerHTML='<div id="vulcan"></div>';
                 }
                 else if(this.getAttribute("data-type") ==="paper"){
                     document.getElementById("status").innerText = "selected paper";
+                    document.getElementById("startButton").innerText = "PLAY";
                     paper=1,scissors=2,lizard=2;
                     playerSelect=paper;
                     document.getElementById('playersChoosen').innerHTML='<div id="wrap"></div>';
                 }
                 else if(this.getAttribute("data-type") ==="scissors"){
                     document.getElementById("status").innerText = "selected scissors";
+                    document.getElementById("startButton").innerText = "PLAY";
                     scissors=1,rock=2,spock=2;
                     playerSelect=scissors;
                     document.getElementById('playersChoosen').innerHTML='<div id="cutting"></div>';
@@ -160,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function(){
 function startGame(){
     gameStatus = document.getElementById("startButton").innerText;
     
-    if (gameStatus == "START"){
+    if (gameStatus == "PLAY"){
         if(playerSelect > computerSelect){
             document.getElementById("status").innerText = "You won";
             document.getElementById('playersChoosen').style.border = 'solid 5px green';
