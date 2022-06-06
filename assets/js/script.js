@@ -46,13 +46,13 @@ function clear(){
     */
     playerSelect = 0, computerSelect = 0;
     playLives = 3, comLives = 3;
-    document.getElementById("startButton").innerText = "START"
+    document.getElementById("startButton").innerText = "START";
 }
 function restart(){
     rock=0, lizard=0, spock=0, paper=0, scissors= 0;
     playerSelect = 0, computerSelect = 0;
     playLives = 3, comLives = 3;
-    document.getElementById("startButton").innerText = "START"
+    document.getElementById("startButton").innerText = "START";
     document.getElementById("status").innerText = "VS";
     document.getElementById('playersChoosen').innerHTML='<div id="selectionAfter"></div>';
     document.getElementById('computersChoosen').innerHTML='<div id="selectionAfter"></div>';
