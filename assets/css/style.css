@@ -689,7 +689,7 @@ images for choosen hand area
         left:40.7%;
     }
 }
-@media only screen and (max-width:850px){
+@media only screen and (max-width:857px){
     .fa-solid{
         display: inline-block;
         text-align: center;
@@ -701,6 +701,7 @@ images for choosen hand area
        
     }
     #name-container{
+        height:100px;
         margin: 0 0 0 4.2%;
     }
     #comSelection{
@@ -709,7 +710,7 @@ images for choosen hand area
     }
     #playerSelection{
         position: fixed;
-        margin: 0 0 0 0%;
+        left:40px;
     }
     #startButton{
         position:fixed;
@@ -727,27 +728,555 @@ images for choosen hand area
         position:fixed;
         left:40.7%;
     }
+    #playerLives{
+        position:fixed;
+        top:740px;
+        left:12%    
+    }
+    #comLives{
+        position:fixed;
+        top:740px;
+        margin: 0 0 0 60.5%; 
+    }
 }
-@media only screen and (max-width:750px){
+@media only screen and (max-width:782px){
+   
     #centerFold{
         position: fixed;
-        margin: 0 0 0 47.5%;
+        margin: 0 0 0 42.7%;
        
     }
     #name-container{
-        margin: 0 0 0 5.2%;
+        margin: 0 0 0 0%;
       
     }
+    #playerSelection{
+        position: fixed;
+        left:3px;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 51.3%;
+    }
+    
     #startButton{
         position:fixed;
-        margin: 0 0 0 40.6%;
+        margin: 0 0 0 35.6%;
     }
     #startButton:hover{
         position:fixed;
-        margin: 0 0 0 40.6%;
+        margin: 0 0 0 35.6%;
+    }
+    #comLives{
+        position:fixed;
+        top:740px;
+        margin: 0 0 0 55.5%; 
+    }
+    #playerLives{
+        position:fixed;
+        top:740px;
+        left:10%    
+    }
+    #winBox{
+        position: fixed;
+        left:10%;
     }
     #winCount{
         position:fixed;
-        left:44.7%;
+        left:37.7%;
+    }
+    .handBox{
+        background-color: gray;
+        border: solid 2px rgb(0, 81, 255);
+        border-radius:50%;
+        height: 140px;
+        width: 140px;
+    }
+    #rock{
+        position:fixed;
+        top:38px;
+        left:30px;
+    }
+    #rock:hover{
+        position: fixed;
+        top:38px;
+        left:10px;
+        height: 180px;
+        width: 180px;
+    }
+    #lizard{
+        position: fixed;
+        top:195px;
+        left:20px;
+    }
+    #lizard:hover{
+        position: fixed;
+        top:175px;
+        left:20px;
+        height: 180px;
+        width: 180px;
+    }
+    #spock{
+        position: fixed;
+        top:38px;
+        left:30px;
+    }
+    #spock:hover{
+        position: fixed;
+        top:38px;
+        left:28px;
+        height: 180px;
+        width: 180px;
+    }
+    #paper{
+        position: fixed;
+        top:195px;
+        left:40px;
+    }
+    #paper:hover{
+        position: fixed;
+        top:175px;
+        left:30px;
+        height: 180px;
+        width: 180px;
+    }
+    #scissors{
+        position: fixed;
+        top:38px;
+        left:37px;
+    }
+    #scissors:hover{
+        position: fixed;
+        top:38px;
+        left:20px;
+        height: 180px;
+        width: 180px;
+    }
+}
+@media only screen and (max-width:600px){
+    #name-container{
+        height:75px;
+        margin: 0 0 0 0%;
+      
+    }
+    .handBox{
+        height: 110px;
+        width: 110px;
+    }
+    #rock{
+        position:fixed;
+        margin: 20px 0 0 5%;
+    }
+    #rock:hover{
+        margin: 2px 0 0 45px;
+        height: 150px;
+        width: 150px;
+    }
+    #lizard{
+        position: fixed;
+        margin: 1.5% 0 0 6%;
+    }
+    #lizard:hover{
+        margin: 1.0% 0 0 6%;
+        height: 150px;
+        width: 150px;
+    }
+    #spock{
+        position: fixed;
+        margin: 17% 0 0 33.3%;
+        
+    }
+    #spock:hover{
+        margin: 14% 0 0 30.3%;
+        height: 150px;
+        width: 150px;
+    }
+    #paper{
+        position: fixed;
+        margin: 1.5% 0 0 60%;
+       
+    }
+    #paper:hover{
+        margin: 0.2% 0 0 55.8%;
+        height: 150px;
+        width: 150px;
+    }
+    #scissors{
+        position: fixed;
+        margin: 20px 0 0 61%;
+       
+    }
+    #scissors:hover{
+        margin: 2px 0 0 57%;
+        height: 150px;
+        width: 150px;
+    }
+    #centerFold{
+        border-left: solid 3px transparent;
+        border-right: solid 3px transparent;
+        border-style:hidden;
+    }
+    #playerSelection{
+        position: fixed;
+        left:-10px;
+        height: 200px;
+        width:200px;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 47.3%;
+        height: 200px;
+        width:200px;
+    }
+    #playerLives{
+        position:fixed;
+        top:704px;
+        left:3%    
+    }
+    #comLives{
+        position:fixed;
+        top:700px;
+        margin: 0 0 0 54.5%; 
+    }
+    .life{
+        display: inline-block;
+        margin: 0 0 0 4%;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    .fa-solid{
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    #gameLives-container{
+
+        height: 240px;
+        width: 90%;
+    }
+    #start-container{
+        height:130px;
+        width:90%;
+    }
+    #startButton{
+        position:fixed;
+        margin: 0 0 0 32.6%;
+    }
+    #startButton:hover{
+        position:fixed;
+        margin: 0 0 0 35.6%;
+    }
+    #hands-container{
+        overflow: hidden;
+        height: 300px;
+        width: 90%;
+        background-color: blueviolet;
+    }
+}
+@media only screen and (max-width:496px){
+    #centerFold{
+        border-left: solid 3px transparent;
+        border-right: solid 3px transparent;
+        border-style:hidden;
+    }
+    #playerSelection{
+        position: fixed;
+        left:-2px;
+        height:150px;
+        width:150px;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 51.3%;
+        height: 150px;
+        width:150px;
+    }
+    #playerLives{
+        position:fixed;
+        top:650px;
+        left:2%    
+    }
+    #comLives{
+        position:fixed;
+        top:650px;
+        margin: 0 0 0 52.5%; 
+    }
+    #gameLives-container{
+
+    height: 190px;
+    width: 90%;
+    background-color: violet;
+    }
+    .handBox{
+        height: 100px;
+        width: 100px;
+    }
+    #rock{
+        position:fixed;
+        margin: 20px 0 0 5%;
+    }
+    #rock:hover{
+        margin: 2px 0 0 45px;
+        height: 150px;
+        width: 150px;
+    }
+    #lizard{
+        position: fixed;
+        margin: 1.5% 0 0 6%;
+    }
+    #lizard:hover{
+        margin: 1.0% 0 0 6%;
+        height: 150px;
+        width: 150px;
+    }
+    #spock{
+        position: fixed;
+        margin: 17% 0 0 33.3%;
+        
+    }
+    #spock:hover{
+        margin: 14% 0 0 30.3%;
+        height: 150px;
+        width: 150px;
+    }
+    #paper{
+        position: fixed;
+        margin: 1.5% 0 0 60%;
+    
+    }
+    #paper:hover{
+        margin: 0.2% 0 0 55.8%;
+        height: 150px;
+        width: 150px;
+    }
+    #scissors{
+        position: fixed;
+        margin: 20px 0 0 61%;
+    
+    }
+    #scissors:hover{
+        margin: 2px 0 0 57%;
+        height: 150px;
+        width: 150px;
+    }
+    .life{
+        display: inline-block;
+        margin: 0 0 0 4%;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+    .fa-solid{
+        display: inline-block;
+        text-align: center;
+        font-size: 25px;
+    }
+    #score-container{
+    
+        height: 100px;
+        width: 90%;
+        
+    }
+    .scoreBox{
+        
+        text-align: center;
+        height: 50px;
+        width: 90px; 
+    }
+    #winBox{
+        position: fixed;
+        left:14%;
+    }
+    #lostBox{
+        position: fixed;
+        margin: 0 0 0 57.8%;
+        background-color: blueviolet;
+    }
+    .countBox{
+        position: fixed;
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+        height: 50px;
+        width: 50px; 
+        background-color:orange;
+    }
+    #winCount{
+        position:fixed;
+        left:36%;
+        height: 20px;
+        color:green;
+        background-color: black;
+    }
+    #lostCount{
+        position: fixed;
+        margin: 0.3% 0 0 45.5%;
+
+    }
+    #victory{
+        margin: 0 0 0 0;
+        font-size: 35px;
+        color: green;
+        
+    }
+    #defeat{
+        margin: 0 0 0 0;
+        font-size: 35px;
+        color: red;
+        background-color: aqua;
+    }
+}
+@media only screen and (max-width:377px){
+    #centerFold{
+        border-left: solid 3px transparent;
+        border-right: solid 3px transparent;
+        border-style:hidden;
+    }
+    #playerSelection{
+        position: fixed;
+        left:-18px;
+        height:150px;
+        width:150px;
+    }
+    #comSelection{
+        position: fixed;
+        margin: 0 0 0 46.3%;
+        height: 150px;
+        width:150px;
+    }
+    #playerLives{
+        position:fixed;
+        top:650px;
+        left:2%    
+    }
+    #comLives{
+        position:fixed;
+        top:650px;
+        margin: 0 0 0 52.5%; 
+    }
+    #gameLives-container{
+
+    height: 190px;
+    width: 90%;
+    background-color: violet;
+    }
+    .handBox{
+        height: 80px;
+        width: 80px;
+    }
+    #rock{
+        position:fixed;
+        margin: 20px 0 0 5%;
+    }
+    #rock:hover{
+        margin: 2px 0 0 45px;
+        height: 120px;
+        width: 120px;
+    }
+    #lizard{
+        position: fixed;
+        margin: 1.5% 0 0 6%;
+    }
+    #lizard:hover{
+        margin: 1.0% 0 0 6%;
+        height: 120px;
+        width: 120px;
+    }
+    #spock{
+        position: fixed;
+        margin: 17% 0 0 33.3%;
+        
+    }
+    #spock:hover{
+        margin: 14% 0 0 30.3%;
+        height: 120px;
+        width: 120px;
+    }
+    #paper{
+        position: fixed;
+        margin: 1.5% 0 0 60%;
+    
+    }
+    #paper:hover{
+        margin: 0.2% 0 0 55.8%;
+        height: 120px;
+        width: 120px;
+    }
+    #scissors{
+        position: fixed;
+        margin: 20px 0 0 61%;
+    
+    }
+    #scissors:hover{
+        margin: 2px 0 0 57%;
+        height: 120px;
+        width: 120px;
+    }
+    .life{
+        display: inline-block;
+        margin: 0 0 0 4%;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+    .fa-solid{
+        display: inline-block;
+        text-align: center;
+        font-size: 25px;
+    }
+    #score-container{
+    
+        height: 100px;
+        width: 90%;
+        
+    }
+    .scoreBox{
+        
+        text-align: center;
+        height: 50px;
+        width: 90px; 
+    }
+    #winBox{
+        position: fixed;
+        left:14%;
+    }
+    #lostBox{
+        position: fixed;
+        margin: 0 0 0 57.8%;
+        background-color: blueviolet;
+    }
+    .countBox{
+        position: fixed;
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+        height: 50px;
+        width: 50px; 
+        background-color:orange;
+    }
+    #winCount{
+        position:fixed;
+        left:36%;
+        height: 20px;
+        color:green;
+        background-color: black;
+    }
+    #lostCount{
+        position: fixed;
+        margin: 0.3% 0 0 45.5%;
+
+    }
+    #victory{
+        margin: 0 0 0 0;
+        font-size: 35px;
+        color: green;
+        
+    }
+    #defeat{
+        margin: 0 0 0 0;
+        font-size: 35px;
+        color: red;
+        background-color: aqua;
     }
 }
